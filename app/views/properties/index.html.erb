@@ -18,13 +18,13 @@
     <% @properties.each do |property| %>
       <tr>
         <td><%= property.property_name %></td>
-        <td><%= property.rent.to_s(:delimited) %></td>
+        <td><%= property.rent.to_s(:delimited) %>円</td>
         <td><%= property.address %></td>
-        <td><%= property.age %></td>
+        <td><%= property.age %>年</td>
         <td><%= property.remarks %></td>
-        <td><%= link_to 'Show', property %></td>
-        <td><%= link_to 'Edit', edit_property_path(property) %></td>
-        <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'この物件情報を削除して宜しいですか?' } %></td>
+        <td><%= link_to '詳細', property %></td>
+        <td><%= link_to '編集', edit_property_path(property) %></td>
+        <td><%= link_to '削除', property, method: :delete, data: { confirm: 'この物件情報を削除して宜しいですか?' } %></td>
       </tr>
     <% end %>
   </tbody>
